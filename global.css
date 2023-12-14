@@ -17,6 +17,8 @@
 body {
     display: block;
     margin: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 iframe {
@@ -81,5 +83,21 @@ iframe {
 
 .form-container {
     display: flex;
+    position: relative;
     align-items: center;
+    width: 80vw;
+    height: 2000px;
+    margin: auto;
+}
+
+@media screen and (max-width: 480px) {
+    .page-grid {
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .form-container {
+        width: 100vw;
+    }
 }
